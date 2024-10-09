@@ -6,7 +6,7 @@
 /*   By: hmunoz-g <hmunoz-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:15:38 by hmunoz-g          #+#    #+#             */
-/*   Updated: 2024/10/08 16:24:25 by hmunoz-g         ###   ########.fr       */
+/*   Updated: 2024/10/09 19:41:55 by hmunoz-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		i = 0;
+		i = 1;
 		while (i < argc)
 		{
 			process(argv[i]);
