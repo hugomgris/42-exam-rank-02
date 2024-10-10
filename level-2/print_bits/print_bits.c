@@ -22,7 +22,6 @@ void	print_bits(unsigned char octet)
 	{
 		bit = (octet >> i & 1) + '0';
 		write (1, &bit, 1);
-		i--;
 	}
 }
 
