@@ -12,20 +12,6 @@
 
 #include <aio.h>
 
-int	ft_search(char c, const char *accept)
-{
-	int	i;
-
-	i = 0;
-	while (accept[i])
-	{
-		if (accept[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 size_t	ft_strspn(const char *s, const char *accept)
 {
 	int	i;
@@ -33,11 +19,9 @@ size_t	ft_strspn(const char *s, const char *accept)
 
 	i = 0;
 	j = 0;
-	while (s[i] && !ft_search(s[i], accept))
-	{
+	while (s[i] && s[i] != accept[0])
 		i++;
-	}
-	while (s[i] && ft_search(s[i], accept))
+	while (s[i] && s[i] == accept[j])
 	{
 		i++;
 		j++;
