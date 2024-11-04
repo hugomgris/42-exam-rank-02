@@ -60,7 +60,7 @@ int	main(int argc, char **argv)
 	nbr = ft_atoi(argv[1]);
 	if (nbr < 0 || argc != 2)
 	{
-		write(1, "0\n", 1);
+		write(1, "0\n", 2);
 		exit (1);
 	}
 	while (nbr > 0)
