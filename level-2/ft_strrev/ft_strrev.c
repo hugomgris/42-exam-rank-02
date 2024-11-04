@@ -21,7 +21,6 @@ char	*ft_strrev(char *str)
 	c = 'a';
 	while (str[l])
 		l++;
-	printf("%d\n", l);
 	while (i < l / 2)
 	{
 		c = str[i];
