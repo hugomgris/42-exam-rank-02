@@ -40,8 +40,8 @@ int	main(int argc, char **argv)
 		exit(1);
 	}
 	else if (!check_char(argv[1], argv[2][0]))
-		while (str[i++])
-			write(1, &str[i], 1);
+		while (str[i])
+			write(1, &str[i++], 1);
 	else
 	{
 		while (str[i])
