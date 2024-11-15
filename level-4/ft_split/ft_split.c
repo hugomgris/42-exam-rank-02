@@ -25,7 +25,7 @@ void	ft_free(char **res, int i)
 
 int	is_space(char c)
 {
-	if (c == ' ' || (c >= 0 && c <= 13))
+	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }
@@ -85,7 +85,7 @@ char **make_splits(char *str, char **res, int wc)
 		while (is_space(str[i]))
 			i++;
 		j = i;
-		while(!is_space(str[j]))
+		while(str[j] && !is_space(str[j]))
 			j++;
 		res[word] = make_word(str, i, j, res, wc);
 		word++;
