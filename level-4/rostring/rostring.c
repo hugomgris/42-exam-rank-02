@@ -23,14 +23,12 @@ int	is_space(char c)
 int	main(int argc, char **argv)
 {
 	int	i;
-	int	l;
 	int	fws;
 	int	fwe;
 
 	if (argc > 1)
 	{
 		i = 0;
-		l = 0;
 		fws = 0;
 		fwe = 0;
 		while (argv[1][i] && is_space(argv[1][i]))
@@ -42,15 +40,17 @@ int	main(int argc, char **argv)
 			i++;
 			fwe++;
 		}
+		while (argv[1][i] && is_space(argv[1][i]))
+			i++;
 		while (argv[1][i])
 		{
-			while (is_space(argv[1][i]))
-				i++;
 			while (!is_space(argv[1][i]) && argv[1][i])
 			{
 				write(1, &argv[1][i], 1);
 				i++;
 			}
+			while (is_space(argv[1][i]))
+				i++;
 			write(1, " ", 1);
 		}
 		while (argv[1][fws] && fws < fwe)
