@@ -41,7 +41,7 @@ int	ft_atoi(char *str)
 		n = (n * 10) + (str[i] - '0');
 		i++;
 	}
-	return (n);
+	return (n * sign);
 }
 
 void	ft_puthex(int n, char *base)
