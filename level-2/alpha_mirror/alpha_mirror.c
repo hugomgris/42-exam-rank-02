@@ -32,14 +32,14 @@ char	conv(char c)
 	{
 		if (c >= 'a' && c <= 'z')
 			c += 2 * ('m' - c) + 1;
-		else if (c >= 'A' && c <= 'z')
+		else if (c >= 'A' && c <= 'Z')
 			c += 2 * ('M' - c) + 1;
 	}
 	else if (right_side(c))
 	{
 		if (c >= 'a' && c <= 'z')
 			c -= 2 * (c - 'm') - 1;
-		else if (c >= 'A' && c <= 'z')
+		else if (c >= 'A' && c <= 'Z')
 			c -= 2 * (c - 'M') - 1;
 	}
 	return (c);
