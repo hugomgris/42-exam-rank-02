@@ -57,12 +57,12 @@ int	main(int argc, char **argv)
 	int	nbr;
 
 	res = 0;
-	nbr = ft_atoi(argv[1]);
-	if (nbr < 0 || argc != 2)
+	if (argc != 2)
 	{
 		write(1, "0\n", 2);
 		exit (1);
 	}
+	nbr = ft_atoi(argv[1]);
 	while (nbr > 0)
 	{
 		if (ft_is_prime(nbr))
